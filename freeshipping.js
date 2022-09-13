@@ -59,7 +59,7 @@ function freeShipping() {
     //Proceed
     var hasFreeShipping = false;
 
-    //Format price
+    //Format price [9,99 €] > [9.99]
     productPrice = productPrice.textContent.replace(/\s/g,'');
     productPrice = productPrice.replace(/,/g,'.');
     productPrice = productPrice.split(/[€]+/)[0];
@@ -97,7 +97,7 @@ function freeShipping() {
                 for (var i = 0; i < cartItems.length; i++) {
                     var cartItemPrice = cartItems[i];
 
-                    //Format price
+                    //Format price  [9,99 €] > [9.99]
                     cartItemPrice = cartItemPrice.textContent.replace(/\s/g,'');
                     cartItemPrice = cartItemPrice.replace(/,/g,'.');
                     cartItemPrice = cartItemPrice.split(/[€]+/)[0];
